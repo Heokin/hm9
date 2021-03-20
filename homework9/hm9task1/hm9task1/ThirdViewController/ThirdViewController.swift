@@ -8,7 +8,7 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
-
+    
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var sliderLabel: UILabel!
     
@@ -16,14 +16,11 @@ class ThirdViewController: UIViewController {
     var email: String = ""
     var name: String = ""
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "NightBG")!)
         infoLabel.text = "\(email) \(secondNameV3) \(name)"
         sliderLabel.text = email
-        
-       
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -37,7 +34,6 @@ class ThirdViewController: UIViewController {
             vc4.name = name
             vc4.secondNameV3 = secondNameV3
             present(vc4, animated: true, completion: nil)
+        }
     }
-    }
-    
 }

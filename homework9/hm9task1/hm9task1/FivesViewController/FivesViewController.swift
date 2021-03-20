@@ -20,11 +20,9 @@ class FivesViewController: UIViewController {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "NightBG")!)
         infoLabel.text = "\(name) \(secondNameV3)"
         emailLabel.text = email
-
     }
     
     @IBAction func nextButton(_ sender: Any) {
-    dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
-    
 }

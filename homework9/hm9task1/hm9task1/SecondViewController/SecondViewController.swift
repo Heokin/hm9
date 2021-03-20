@@ -15,8 +15,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var secondName: UILabel!
     @IBOutlet weak var yoTextField: UITextField!
     @IBOutlet weak var secondNameTextField: UITextField!
-//    var email: String = ""
-//    var secondNameText: String = ""
+    //    var email: String = ""
+    //    var secondNameText: String = ""
     @IBOutlet weak var nextButton: UIButton!
     var name: String = ""
     override func viewDidLoad() {
@@ -26,12 +26,8 @@ class SecondViewController: UIViewController {
         secondName.text = "Write your second name"
         yoLabel.text = "Write your email"
         nextButton.layer.cornerRadius = 25
-        
-        
-        
-        
     }
-
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -46,7 +42,7 @@ class SecondViewController: UIViewController {
                 vc3.email = yoTextField.text!
                 vc3.name = name
                 present(vc3, animated: true, completion: nil)
+            }
         }
     }
-}
 }

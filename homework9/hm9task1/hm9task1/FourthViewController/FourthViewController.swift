@@ -21,7 +21,7 @@ class FourthViewController: UIViewController {
         emailLabel.text = email
         view.backgroundColor = UIColor(patternImage: UIImage(named: "NightBG")!)
     }
-
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -32,9 +32,8 @@ class FourthViewController: UIViewController {
             vc5.name = name
             vc5.secondNameV3 = secondNameV3
             present(vc5, animated: true, completion: nil)
-                
-            }
             
         }
     }
-    
+}
+

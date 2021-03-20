@@ -20,10 +20,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "NightBG")!)
         registerButtonUI.tag = 1
         registerButtonUI.layer.cornerRadius = 25
-        
     }
-    
-    
     
     @IBAction func nextButton(_ sender: Any) {
         name = test.text!
@@ -33,23 +30,17 @@ class ViewController: UIViewController {
             welcomLabel.text = "Hello \(test.text!)"
             registerLabel.text = "tap registration button"
         }
-        
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
-        if test.text == ""{
+        if test.text == "" {
             welcomLabel.text = "U should write your name"
         } else {
             let storyboard = UIStoryboard(name:"SecondStoryboard", bundle: Bundle.main)
             if let vc2 = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController {
                 vc2.name = test.text!
-                //                show(vc2, sender: nil)
                 present(vc2, animated: true, completion: nil)
-                
             }
         }
-        
     }
 }
-
-
