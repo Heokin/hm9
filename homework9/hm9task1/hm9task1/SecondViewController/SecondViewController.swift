@@ -15,10 +15,10 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var secondName: UILabel!
     @IBOutlet weak var yoTextField: UITextField!
     @IBOutlet weak var secondNameTextField: UITextField!
-    //    var email: String = ""
-    //    var secondNameText: String = ""
     @IBOutlet weak var nextButton: UIButton!
+    
     var name: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "NightBG")!)
@@ -31,6 +31,7 @@ class SecondViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func switchViewController(_ sender: UIButton) {
         if yoLabel.text == "" && secondNameTextField.text == "" {
             yoLabel.text = "you should write your email"

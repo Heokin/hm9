@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var registerButtonUI: UIButton!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var test: UITextField!
+    
     var name: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "NightBG")!)
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
-        if test.text == "" {
+        if test.text?.replacingOccurrences(of: " ", with: "") == "" {
             welcomLabel.text = "U should write your name"
         } else {
             let storyboard = UIStoryboard(name:"SecondStoryboard", bundle: Bundle.main)

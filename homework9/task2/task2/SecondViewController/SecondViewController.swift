@@ -14,22 +14,23 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelHorsePower: UILabel!
     
-    var carInfo = Car(name: "", model: "", date: 0, horsePower: 0)
-
-    
+    var carInfo: Car?
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange
-        labelDate.text = String(carInfo.date)
-        labelName.text = carInfo.name
-        labelModel.text = carInfo.model
-        labelHorsePower.text = String(carInfo.horsePower)
-        
-       
+        view.subviews.forEach { ($0 as? UILabel)?.text = "Waiting info..." }
     }
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    func setCarInfo(_ carInfo: Car) {
+        self.carInfo = carInfo
+        labelDate.text = String(carInfo.date)
+        labelName.text = carInfo.name
+        labelModel.text = carInfo.model
+        labelHorsePower.text = String(carInfo.horsePower)
+    }
 }

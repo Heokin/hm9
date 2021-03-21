@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     @IBAction func nextButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "SecondStoryboard", bundle: Bundle.main)
         if let vc2 = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController {
-            vc2.carInfo = carInfoVC
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                vc2.setCarInfo(self.carInfoVC)
+            }
             present(vc2, animated: true, completion: nil)
         }
     }
