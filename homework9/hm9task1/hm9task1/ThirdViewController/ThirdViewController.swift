@@ -33,6 +33,7 @@ class ThirdViewController: UIViewController {
             vc4.email = email
             vc4.name = name
             vc4.secondNameV3 = secondNameV3
+            vc4.modalPresentationStyle = .currentContext
             present(vc4, animated: true, completion: nil)
         }
     }

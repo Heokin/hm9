@@ -42,6 +42,7 @@ class SecondViewController: UIViewController {
                 vc3.secondNameV3 = secondNameTextField.text!
                 vc3.email = yoTextField.text!
                 vc3.name = name
+                vc3.modalPresentationStyle = .currentContext
                 present(vc3, animated: true, completion: nil)
             }
         }

@@ -32,6 +32,7 @@ class FourthViewController: UIViewController {
             vc5.email = email
             vc5.name = name
             vc5.secondNameV3 = secondNameV3
+            vc5.modalPresentationStyle = .currentContext
             present(vc5, animated: true, completion: nil)
             
         }

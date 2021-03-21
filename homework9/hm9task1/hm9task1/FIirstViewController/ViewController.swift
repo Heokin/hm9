@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             let storyboard = UIStoryboard(name:"SecondStoryboard", bundle: Bundle.main)
             if let vc2 = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController {
                 vc2.name = test.text!
+                vc2.modalPresentationStyle = .currentContext
                 present(vc2, animated: true, completion: nil)
             }
         }
